@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production ./node_modules/.bin/babel bin/ -d dist/bin/ && ./node_modules/.bin/babel src/ -d dist/src/",
     "server": "npm run build && NODE_ENV=production node ./dist/bin/index",
     "dev": "NODE_ENV=development ./node_modules/.bin/nodemon --exec ./node_modules/.bin/babel-node --inspect ./bin/index",
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha --opts src/test/integration/mocha.opts src/test/integration/*.js --exit",
+    "test": "npm run env:test && NODE_ENV=test ./node_modules/.bin/mocha --opts src/test/integration/mocha.opts src/test/integration/tests.js --exit",
     "db:production": "./dbs/production/script_db.sh",
     "db:development": "./dbs/development/script_db.sh",
     "db:test": "./dbs/test/script_db.sh",
@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/weslopes/express-knex-bookshelf-boilerplate#readme",
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "basic-logger": "^0.4.4",
     "bookshelf": "^0.13.2",
     "config": "^1.30.0",
@@ -46,6 +47,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "chai": "^4.1.2",
