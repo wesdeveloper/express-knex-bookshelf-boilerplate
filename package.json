@@ -8,6 +8,9 @@
     "server": "npm run build && NODE_ENV=production node ./dist/bin/index",
     "dev": "NODE_ENV=development ./node_modules/.bin/nodemon --exec ./node_modules/.bin/babel-node --inspect ./bin/index",
     "test": "NODE_ENV=test ./node_modules/.bin/mocha --opts src/test/integration/mocha.opts src/test/integration/*.js --exit",
+    "db:production": "./dbs/production/script_db.sh",
+    "db:development": "./dbs/development/script_db.sh",
+    "db:test": "./dbs/test/script_db.sh",
     "eslint": "./node_modules/.bin/eslint ./src/*",
     "precommit": "npm run eslint"
   },
@@ -29,8 +32,11 @@
   "homepage": "https://github.com/weslopes/express-knex-bookshelf-boilerplate#readme",
   "dependencies": {
     "basic-logger": "^0.4.4",
+    "bookshelf": "^0.13.2",
     "config": "^1.30.0",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
+    "knex": "^0.14.4",
     "morgan": "^1.9.0"
   },
   "devDependencies": {

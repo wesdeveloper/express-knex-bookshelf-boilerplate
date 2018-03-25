@@ -2,7 +2,9 @@
   "development": {
     "PORT": 3000,
     "DB_HOST": "127.0.0.1",
-    "DB_USER": "admin",
-    "DB_PORT": "admin"
+    "DB_PORT": "5432",
+    "DB_USER": "postgres",
+    "DB_PORT": "postgres",
+    "DB_NAME": "db_development"
   }
 }
