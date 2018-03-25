@@ -11,6 +11,10 @@
     "db:production": "./dbs/production/script_db.sh",
     "db:development": "./dbs/development/script_db.sh",
     "db:test": "./dbs/test/script_db.sh",
+    "run:migrations": "./node_modules/.bin/knex migrate:latest",
+    "run:seeds": "./node_modules/.bin/knex seed:run",
+    "env:test": "NODE_ENV=test npm run db:test && NODE_ENV=test npm run run:migrations && NODE_ENV=test npm run run:seeds",
+    "env:dev": "NODE_ENV=development npm run db:development && NODE_ENV=development npm run run:migrations && NODE_ENV=development npm run run:seeds",
     "eslint": "./node_modules/.bin/eslint ./src/*",
     "precommit": "npm run eslint"
   },
@@ -37,7 +41,8 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "knex": "^0.14.4",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "pg": "^7.4.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
