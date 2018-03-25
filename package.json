@@ -1,0 +1,38 @@
+{
+  "name": "express-knex-bookshelf-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate to build express app with knex and bookshelf orm, and tests on es6.",
+  "main": "bin/index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development ./node_modules/.bin/nodemon --exec ./node_modules/.bin/babel-node --inspect ./bin/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weslopes/express-knex-bookshelf-boilerplate.git"
+  },
+  "keywords": [
+    "express",
+    "knex",
+    "bookshelf",
+    "test"
+  ],
+  "author": "@weslopes Wesley Lopes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weslopes/express-knex-bookshelf-boilerplate/issues"
+  },
+  "homepage": "https://github.com/weslopes/express-knex-bookshelf-boilerplate#readme",
+  "dependencies": {
+    "basic-logger": "^0.4.4",
+    "config": "^1.30.0",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.17.2"
+  }
+}
