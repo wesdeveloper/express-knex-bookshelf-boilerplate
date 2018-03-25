@@ -1,0 +1,5 @@
+--require babel-core/register
+--require src/test/integration/helper.js
+--reporter spec
+--slow 9000
+--timeout 15000
